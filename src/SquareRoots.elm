@@ -81,7 +81,6 @@ type Msg
     | ChangeSecond String
     | Continue
     | SubmitKeyDown Int
-    | NoOp
 
 
 checkSubmission : Model -> SubmitStatus
@@ -143,9 +142,6 @@ submit model =
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        NoOp ->
-            ( model, Cmd.none )
-
         SubmitKeyDown key ->
             if key == 13 then
                 submit model
