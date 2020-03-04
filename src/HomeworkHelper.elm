@@ -227,6 +227,7 @@ view problemView explanationView model =
                 ( Just Incorrect, Incomplete ) ->
                     div []
                         [ problemView True model.subModel |> Html.map SubMsg
+                        , h2 [ class "title is-2" ] [ text "Incorrect!" ]
                         , explanationView model.subModel |> Html.map SubMsg
                         , button [ class "button is-primary", onClick Continue ] [ text "Continue" ]
                         ]

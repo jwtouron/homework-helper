@@ -160,8 +160,7 @@ problemView disable model =
 explanationView : Model -> Html Msg
 explanationView model =
     div []
-        [ h2 [ class "title is-2" ] [ text "Incorrect!" ]
-        , label [ class "label is-large" ] [ text ("√" ++ String.fromInt (model.firstNum * model.firstNum * model.secondNum)) ]
+        [ label [ class "label is-large" ] [ text ("√" ++ String.fromInt (model.firstNum * model.firstNum * model.secondNum)) ]
         , label [ class "label is-large" ]
             [ text
                 ("= √("
